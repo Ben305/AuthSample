@@ -1,0 +1,16 @@
+<p>Main</p>
+
+<p>
+
+</p>
+
+<p>
+    <a href="/member">Open member area</a>
+</p>
+
+<div>vm.currentUser (JSON): {{vm.currentUser}}</div>
+<div>Name in user profile: {{vm.currentUser.profile.name}}</div>
+
+<p>Enter new name</p>
+<input ng-model="vm.newName"/>
+<button ng-click="vm.updateName()">Update name in profile</button>

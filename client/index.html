@@ -1,0 +1,15 @@
+<head>
+    <base href="/">
+</head>
+
+<body ng-app="authSampleApp">
+    <div ng-controller="headerController as vm" style="width:100%; background-color: gray">
+        Header controller: {{vm.profileName}}
+    </div>
+
+    <div align="right">
+        <login-buttons></login-buttons>
+    </div>
+
+    <div ui-view></div>
+</body>
