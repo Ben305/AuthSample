@@ -1,16 +1,14 @@
-<p>Main</p>
+<h1>MainController</h1>
 
-<p>
+<div ng-if="!vm.currentUser">
+	<p>Please log in</p>
+</div>
 
-</p>
+<div ng-if="vm.currentUser">
+	<div>vm.currentUser (JSON): {{vm.currentUser}}</div>
+	<div>Name in user profile: {{vm.currentUser.profile.name}}</div>
 
-<p>
-    <a href="/member">Open member area</a>
-</p>
-
-<div>vm.currentUser (JSON): {{vm.currentUser}}</div>
-<div>Name in user profile: {{vm.currentUser.profile.name}}</div>
-
-<p>Enter new name</p>
-<input ng-model="vm.newName"/>
-<button ng-click="vm.updateName()">Update name in profile</button>
+	<p>Enter new name (Reload page if you are logged in, but this field is empty)</p>
+	<input ng-model="vm.newName"/>
+	<button ng-click="vm.updateName()">Update name in profile</button>
+</div>
